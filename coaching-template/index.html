@@ -1451,7 +1451,7 @@ h1, h2, h3, h4, h5, h6 { font-family: Outfit, system-ui, sans-serif; }
 .erio-services-intro [class*="text-gradient"]{background:none!important}
 
 /* ── one clearly visible frost for the hero form, reviews, and CTA cards ─── */
-.erio-hero-form-panel,#reviews [data-tpages] .glass-card,.erio-cta-contact{backdrop-filter:blur(36px) saturate(135%)!important;-webkit-backdrop-filter:blur(36px) saturate(135%)!important}
+.erio-hero-form-panel,#reviews [data-tpages] .glass-card,.erio-cta-contact{backdrop-filter:blur(28px) saturate(135%)!important;-webkit-backdrop-filter:blur(28px) saturate(135%)!important}
 .erio-hero-form-panel{background-color:rgba(0,0,0,.62)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 24px 60px rgba(0,0,0,.28)!important}
 #reviews [data-tpages] .glass-card,.erio-cta-contact{background-color:rgba(255,255,255,.06)!important;background-image:linear-gradient(135deg,rgba(255,255,255,.13),rgba(255,255,255,.025))!important;border-color:rgba(255,255,255,.20)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 16px 45px rgba(0,0,0,.24)!important}
 
@@ -1463,7 +1463,7 @@ h1, h2, h3, h4, h5, h6 { font-family: Outfit, system-ui, sans-serif; }
 .erio-mobile-menu-close-icon{display:none}
 .erio-mobile-menu-toggle[aria-expanded="true"] .erio-mobile-menu-open-icon{display:none}
 .erio-mobile-menu-toggle[aria-expanded="true"] .erio-mobile-menu-close-icon{display:block}
-.erio-mobile-menu{position:fixed;z-index:49;top:var(--erio-mobile-menu-top,100px);left:max(16px,env(safe-area-inset-left));right:max(16px,env(safe-area-inset-right));padding:16px;border:1px solid rgba(255,255,255,.12);border-radius:24px;background:rgba(15,15,15,.70);box-shadow:0 24px 60px rgba(0,0,0,.38);backdrop-filter:blur(40px) saturate(130%);-webkit-backdrop-filter:blur(40px) saturate(130%);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-10px) scale(.985);transform-origin:top;transition:opacity .28s cubic-bezier(.22,1,.36,1),transform .28s cubic-bezier(.22,1,.36,1),visibility 0s linear .28s;max-height:calc(100dvh - var(--erio-mobile-menu-top,100px) - 16px);overflow-y:auto}
+.erio-mobile-menu{position:fixed;z-index:49;top:var(--erio-mobile-menu-top,100px);left:max(16px,env(safe-area-inset-left));right:max(16px,env(safe-area-inset-right));padding:16px;border:1px solid rgba(255,255,255,.12);border-radius:24px;background:rgba(15,15,15,.70);box-shadow:0 24px 60px rgba(0,0,0,.38);backdrop-filter:blur(28px) saturate(130%);-webkit-backdrop-filter:blur(28px) saturate(130%);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-10px) scale(.985);transform-origin:top;transition:opacity .28s cubic-bezier(.22,1,.36,1),transform .28s cubic-bezier(.22,1,.36,1),visibility 0s linear .28s;max-height:calc(100dvh - var(--erio-mobile-menu-top,100px) - 16px);overflow-y:auto}
 .erio-mobile-menu.open{opacity:1;visibility:visible;pointer-events:auto;transform:none;transition-delay:0s}
 .erio-mobile-menu-actions{display:grid;gap:10px}
 .erio-mobile-menu-actions a{display:flex;min-height:50px;align-items:center;justify-content:center;gap:9px;border-radius:16px;font-family:Figtree,system-ui,sans-serif;font-size:16px;font-weight:700;text-decoration:none}
@@ -1485,9 +1485,10 @@ h1, h2, h3, h4, h5, h6 { font-family: Outfit, system-ui, sans-serif; }
 /* Two fields per row (name, then contact), then one full-width row for the
    requested service. Generous gaps so the rows read as separate groups, and a
    deliberate gap under the gradient header above the form. */
-.erio-form{padding:26px 16px 24px;display:flex;flex-direction:column;gap:16px}
+.erio-form{padding:44px 16px 24px;display:flex;flex-direction:column;gap:0}
 .erio-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .erio-row-full{grid-template-columns:1fr}
+.erio-row+.erio-row{margin-top:32px}
 /* min-width:0 keeps a grid child from being forced wider than its column by
    the input's default intrinsic width */
 .erio-field{display:flex;flex-direction:column;gap:6px;min-width:0}
@@ -1495,10 +1496,10 @@ h1, h2, h3, h4, h5, h6 { font-family: Outfit, system-ui, sans-serif; }
 .erio-in{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:12px 14px;color:#fff;font-family:Figtree,system-ui,sans-serif;font-size:15px;line-height:1.2;outline:none;transition:border-color .18s,background .18s}
 .erio-in::placeholder{color:rgba(255,255,255,.45)}
 .erio-in:focus{border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.10)}
-.erio-submit{width:100%;margin-top:8px;border:none;cursor:pointer;border-radius:12px;padding:15px 20px;font-family:Outfit,system-ui,sans-serif;font-weight:700;font-size:15px;letter-spacing:.02em;color:#fff;background:var(--gradient-aqua,linear-gradient(135deg,hsl(0 0% 8%),hsl(0 0% 20%) 40%,hsl(0 0% 35%) 75%,hsl(0 0% 55%)));box-shadow:0 10px 30px -10px rgba(0,0,0,.6);transition:transform .15s,box-shadow .15s,filter .15s}
+.erio-submit{width:100%;margin-top:48px;border:none;cursor:pointer;border-radius:12px;padding:15px 20px;font-family:Outfit,system-ui,sans-serif;font-weight:700;font-size:15px;letter-spacing:.02em;color:#fff;background:var(--gradient-aqua,linear-gradient(135deg,hsl(0 0% 8%),hsl(0 0% 20%) 40%,hsl(0 0% 35%) 75%,hsl(0 0% 55%)));box-shadow:0 10px 30px -10px rgba(0,0,0,.6);transition:transform .15s,box-shadow .15s,filter .15s}
 .erio-submit:hover{transform:translateY(-1px);filter:brightness(1.12);box-shadow:0 16px 36px -12px rgba(0,0,0,.7)}
 .erio-submit:active{transform:translateY(0)}
-.erio-fine{margin-top:4px;text-align:center;font-family:Figtree,system-ui,sans-serif;font-size:11px;color:rgba(255,255,255,.45)}
+.erio-fine{margin-top:20px;text-align:center;font-family:Figtree,system-ui,sans-serif;font-size:11px;color:rgba(255,255,255,.45)}
 .erio-form.sent .erio-submit{background:hsl(150 45% 34%)}
 @media (max-width:380px){.erio-row{grid-template-columns:1fr}}
 
@@ -2016,7 +2017,7 @@ nav.logo-sm .nav-logo{height:3rem!important}
 (function(){
   var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ── synchronized hero counters: 1/1 and 1% → 24/7 and 100% ─────────── */
+  /* ── hero counters: keep one timeline, but let each value finish naturally */
   (function(){
     var percentage = document.querySelector('[data-hero-percentage]');
     var hours = document.querySelector('[data-hero-hours]');
@@ -2034,8 +2035,8 @@ nav.logo-sm .nav-logo{height:3rem!important}
       var progress = Math.min(1, (now - started) / duration);
       var eased = 1 - Math.pow(1 - progress, 3);
       if (progress < 1){
-        hours.textContent = Math.min(23, Math.max(1, Math.round(1 + 23 * eased)));
-        days.textContent = Math.min(6, Math.max(1, Math.round(1 + 6 * eased)));
+        hours.textContent = Math.min(24, Math.max(1, Math.round(1 + 23 * eased)));
+        days.textContent = Math.min(7, Math.max(1, Math.round(1 + 6 * eased)));
         percentage.textContent = Math.min(99, Math.max(1, Math.round(1 + 99 * eased))) + '%';
         requestAnimationFrame(count);
       } else finish();
@@ -2054,10 +2055,17 @@ nav.logo-sm .nav-logo{height:3rem!important}
   document.body.style.overflow = '';
 
   /* ── 1. smooth scroll, 80px nav offset (exactly the original helper) ── */
-  function goTo(hash){
+  function goTo(hash, source){
     var id = hash.replace('#','');
     var el = document.getElementById(id);
-    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: RM ? 'auto' : 'smooth' });
+    var mobileContactLink = source && source.closest('.erio-mobile-menu-links');
+    if (hash === '#contact' && window.innerWidth < 1024 && !mobileContactLink) el = document.querySelector('.erio-cal') || el;
+    var offset = 80;
+    if (window.innerWidth < 1024){
+      var fixedNav = document.querySelector('nav[class*="fixed"]');
+      if (fixedNav) offset = Math.ceil(fixedNav.getBoundingClientRect().bottom + 24);
+    }
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - offset, behavior: RM ? 'auto' : 'smooth' });
     else if (hash === '#home') window.scrollTo({ top: 0, behavior: RM ? 'auto' : 'smooth' });
   }
   var mobileMenu = document.querySelector('[data-mobile-menu]');
@@ -2101,11 +2109,11 @@ nav.logo-sm .nav-logo{height:3rem!important}
     var h = a.getAttribute('href') || a.getAttribute('data-scroll');
     if (!h || h === '#' || h.length < 2) return;
     e.preventDefault();
-    goTo(h);
+    goTo(h, a);
     setMobileMenu(false);
   });
 
-  /* ── 2. navbar: frost + shrink past 40px, logo by scroll direction ──── */
+  /* ── 2. navbar: mobile stays compact off the top; desktop keeps direction */
   var nav = document.querySelector('nav');
   if (nav){
     var lastY = window.scrollY;
@@ -2113,14 +2121,18 @@ nav.logo-sm .nav-logo{height:3rem!important}
     if (logo) logo.classList.add('nav-logo');
     var onScroll = function(){
       var y = window.scrollY;
-      nav.classList.toggle('nav-scrolled', y > 40);
-      if (y < 40) nav.classList.remove('logo-sm');
+      var mobileViewport = window.innerWidth < 1024;
+      var awayFromTop = mobileViewport ? y > 0 : y > 40;
+      nav.classList.toggle('nav-scrolled', awayFromTop);
+      if (mobileViewport) nav.classList.toggle('logo-sm', awayFromTop);
+      else if (y < 40) nav.classList.remove('logo-sm');
       else if (y > lastY) nav.classList.add('logo-sm');
       else if (y < lastY) nav.classList.remove('logo-sm');
       if (mobileMenu && mobileMenu.classList.contains('open')) positionMobileMenu();
       lastY = y;
     };
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
     onScroll();
   }
 
